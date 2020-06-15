@@ -135,6 +135,10 @@ select:focus{
     margin-left: auto;
 }
 
+a{
+    text-decoration: none;
+}
+
 
 
 .task{
@@ -156,7 +160,7 @@ select:focus{
 
 .task-category{
     color: white;
-    width: 8%;
+    width: 13%;
     flex-grow: 1;
   
 }
@@ -164,6 +168,11 @@ select:focus{
       background-color: teal;
       height: inherit;
       width: 80%;
+}
+.task-date-desc {
+    font-size: 0.8rem;
+    margin-left: -3vw;
+    vertical-align: -20
 }
 .active {
      background-color: lightgrey;

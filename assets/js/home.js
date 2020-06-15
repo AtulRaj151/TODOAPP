@@ -6,7 +6,7 @@ const taskContainer = document.getElementById('tasks-container');
  function handleEvent(e){
 
 
-    console.log(e.target);
+    // console.log(e.target);
          
             if(e.target.id == 'desc-input'){
 
@@ -45,6 +45,14 @@ function Unhighlight(element){
 
 }
 window.addEventListener('click',handleEvent);
+
+//function to generate random color
+
+function generateRandomColor(){
+
+    const randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+    return randomColor;
+}
 
 
 // function  ajaxCheck(){

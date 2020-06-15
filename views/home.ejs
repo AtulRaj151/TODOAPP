@@ -41,7 +41,7 @@
 
                 <div id="date-picker">
                 <label for="due-date">Due-Date</label>
-                <input type="date" name="date" id="due-date" required>
+                <input type="date" name="date" id="due-date" >
                 </div>
             </div>
 
@@ -58,11 +58,14 @@
                   </button>
 
                     <!-- delete tasks -->
-
+                   
+                    <a href="/delete-task">
                      <div id="btn-del">
                         <i class="fas fa-trash-alt"></i>
                         <span>Delete Tasks</span>
                      </div>
+                     </a>
+                    
 
            </div>
 
@@ -91,7 +94,7 @@
                          <div class="task-desc">
 
                             <span ><%= task.description %></span>
-                            <!-- <span><%= task.date %></span> -->
+                            <span class="task-date-desc"><%= task.date %></span>
                          </div>
                        
                         <div class="task-category"><span><%= task.category%></span> </div>

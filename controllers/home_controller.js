@@ -14,7 +14,21 @@ module.exports.createTask =  function(req,res) {
 
       console.log(req.body);
 
-       Tasks.create(req.body,function(err,tasks){
+         let date = req.body.date;
+
+         if(req.body.date === ''){
+              date = "NoDeadLine";
+         }
+
+       Tasks.create({
+           description: req.body.description,
+           category:req.body.category,
+           done:'unchecked',
+           date:date
+           
+
+
+       },function(err,tasks){
 
           if(err){ console.log('error',err); return;}
           console.log('added to the database')
@@ -30,7 +44,7 @@ module.exports.createTask =  function(req,res) {
 module.exports.checkTask = async function(req,res){
 
            let task  =  await Tasks.findById(req.params.id);
-          console.log(task);
+          // console.log(task);
            
                 
                // if(err) { console.log('Error in finding the element',err); return;}
@@ -59,5 +73,16 @@ module.exports.checkTask = async function(req,res){
                      console.log("task not found")
                 }
 
+          
+}
+
+
+module.exports.deleteTask =  async function(req,res){
+
+        let task  = await Tasks.deleteMany({done:'checked'});
+
+         console.log(task);
+
+         return res.redirect('back');
           
 }

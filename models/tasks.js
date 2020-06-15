@@ -9,7 +9,8 @@ let taskSchema = mongoose.Schema({
                  type: String
              },
              date:{
-                 type:String
+                 type:String,
+                 default:'NoDeadline'
              },
              done:{
                  type:String,
