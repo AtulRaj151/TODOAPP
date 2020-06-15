@@ -1,0 +1,183 @@
+ body{
+     color: grey;
+ }
+
+
+
+  
+#container{
+      border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      margin-right: auto;
+     margin-left: auto;
+     
+}
+input:focus{
+    outline: none;
+    
+}
+input{
+    border: 0;
+}
+
+select{
+    border: 0;
+}
+select:focus{
+
+      outline: none;
+}
+
+/* header */
+
+#header{
+      text-align: center;
+      border-bottom: 1px solid black;
+}
+
+#desc{
+
+      width: 100%;
+      border-bottom: 1px solid black;
+}
+#desc input {
+
+     height: 5vh;
+     width: 100%;
+     border: 0;
+}
+#category-date-container{
+    display: flex;
+    border-bottom: 1px solid black;
+    /* justify-content: space-around; */
+    height: 8vh;
+
+}
+#category-box{
+
+      width: 50%;
+      display: inline-flex;
+      flex-direction: column;
+}
+#date-picker{
+    width: 50%;
+    display: inline-flex;
+    flex-direction: column;
+    border-left: 1px solid black;
+    /* align-items: center; */
+    padding: 5px;
+    width: 50%;
+}
+
+
+#add-del-container{
+    display: flex;
+}
+
+#add-del-container {
+
+      display: flex;
+      justify-content: space-around;
+      height: 8vh;
+      align-items: center;
+      align-self: center;
+}
+#btn-add{
+      display: block;
+      margin: 4px;
+      background-color: black;
+      color: white;
+      height: 4vh;
+      padding: 8px;
+      border-radius: 10px;
+     
+      
+    }
+#btn-add:hover{
+    cursor: pointer;
+    
+}
+#submit-btn{
+    border: 0;
+    background-color: white;
+}
+
+#submit-btn:focus{
+    outline: none;
+    
+  
+}
+
+#btn-del{
+    display: block;
+    margin: 4px;
+    background-color: red;
+    color: white;
+    height: 4vh;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+#btn-del{
+    cursor: pointer;
+}
+
+#tasks-container{
+
+    border: 1px solid black;
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+.task{
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    background-color: turquoise;
+    border: 1px solid grey;
+    align-items: center;
+
+}
+.task-desc{
+    flex-grow: 6;
+    color:black;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.task-category{
+    color: white;
+    width: 8%;
+    flex-grow: 1;
+  
+}
+.task-category span{
+      background-color: teal;
+      height: inherit;
+      width: 80%;
+}
+.active {
+     background-color: lightgrey;
+}
+
+.checkbox:checked{
+
+    background-color: lime;
+}
+.checkbox:hover{
+    cursor: pointer;
+}
+
+.checkbox:checked ~ .task-desc {
+     text-decoration: line-through;
+     color: red;
+}
