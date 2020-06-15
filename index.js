@@ -12,6 +12,10 @@ app.use(express.static('./assets'));
 const db = require('./config/mongoose');
 const Tasks = require('./models/tasks');
 
+//random color
+const randomColor = require('randomcolor');
+const color = randomColor();
+
 app.use(express.urlencoded());
 
 

@@ -16,6 +16,10 @@ let taskSchema = mongoose.Schema({
                  type:String,
                  default:'unchecked'
                  
+             },
+             color:{
+                 type:String,
+                 default:'blue'
              }
 },{
     timestamps:true

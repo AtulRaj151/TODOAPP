@@ -1,11 +1,15 @@
 const Tasks = require('../models/tasks');
+const randomColor = require('randomcolor');
+
 module.exports.home = function(req,res){
+    
 
    let task =   Tasks.find({},function(err,task){
            if(err){ console.log('error',err); return; }           
                  return res.render('home',{
                   title:'toDoList',
                   tasks:task
+                  
                  });
    });
 }
@@ -19,12 +23,14 @@ module.exports.createTask =  function(req,res) {
          if(req.body.date === ''){
               date = "NoDeadLine";
          }
+         const color  = randomColor();
 
        Tasks.create({
            description: req.body.description,
            category:req.body.category,
            done:'unchecked',
-           date:date
+           date:date,
+           color:color
            
 
 
