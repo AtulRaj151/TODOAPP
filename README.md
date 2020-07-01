@@ -7,6 +7,8 @@
 
 ### Installation
 - clone this repository  and inside the directory type
+
+
          - npm init
          - npm start
          - localhost:8000
